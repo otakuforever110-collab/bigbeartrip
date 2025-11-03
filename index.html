@@ -9,6 +9,7 @@
   body {
     font-family: 'Comfortaa', 'Times New Roman', sans-serif;
     font-size: 20px;
+    line-height: 1.5;
     margin: 0;
     color: #333;
     background-image: url('https://images.unsplash.com/photo-1600508774512-4ad690a2a08a?auto=format&fit=crop&w=1600&q=80');
@@ -47,6 +48,69 @@
     border-bottom: 2px solid #4b9cd3;
     padding-bottom: 5px;
   }
+    .airbnb-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.airbnb-gallery img {
+  width: 250px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.airbnb-gallery img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+}
+    /* Airbnb section */
+.airbnb-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 10px;
+}
+
+.airbnb-item {
+  text-align: center;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  transition: transform 0.3s, box-shadow 0.3s;
+  width: 250px;
+}
+
+.airbnb-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+}
+
+.airbnb-item img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.caption {
+  margin-top: 8px;
+  font-weight: 600;
+  font-size: 1.1em;
+  color: #333;
+}
+
+.price {
+  color: #4b9cd3;
+  font-weight: bold;
+}
   footer {
     text-align: center;
     padding: 10px;
@@ -107,6 +171,37 @@ footer p {
       <li>Snacks, drinks, and board games (optional)</li>
     </ul>
   </section>
+<section id="airbnb">
+  <h2>🏠 Airbnb Options</h2>
+  <p>Click an image below to view the Airbnb listing.</p>
+
+  <div class="airbnb-gallery">
+
+    <div class="airbnb-item">
+      <a href="https://www.airbnb.com/rooms/694399222619294512?adults=5&children=0&infants=0&pets=0&wishlist_item_id=11005544523509&check_in=2026-01-17&check_out=2026-01-18&source_impression_id=p3_1762141890_P3M9P-TdtZRsAT4M&previous_page_section_name=1000" target="_blank">
+        <img src="https://a0.muscache.com/im/pictures/05f14310-65f3-4ddd-8c1d-75f21fbe0938.jpg?im_w=720" alt="Cabin 1" />
+      </a>
+      <p class="caption">❄ Cozy Cabin with Fireplace • <span class="price">$353.66 / night</span></p>
+    </div>
+
+    <div class="airbnb-item">
+      <a href="https://www.airbnb.com/rooms/1538079493466700065?adults=5&children=0&infants=0&pets=0&wishlist_item_id=11005544492799&check_in=2026-01-17&check_out=2026-01-18&source_impression_id=p3_1762142033_P35lGf2AplE0uc0e&previous_page_section_name=1000" target="_blank">
+        <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-1538079493466700065/original/fc33401b-8b41-402a-80ea-3a2823f8e979.jpeg?im_w=720" alt="Cabin 2" />
+      </a>
+      <p class="caption">🏔️ Lakeside Lodge • <span class="price">$429 / night</span></p>
+    </div>
+
+    <div class="airbnb-item">
+      <a href="https://www.airbnb.com/rooms/5479008?adults=5&children=0&infants=0&pets=0&wishlist_item_id=11005544521055&check_in=2026-01-17&check_out=2026-01-18&source_impression_id=p3_1762142033_P3z3a1cW3VLRAG_q&previous_page_section_name=1000" target="_blank">
+        <img src="https://a0.muscache.com/im/pictures/71950400-cb79-48a6-b113-759a8b578ead.jpg?im_w=720" alt="Cabin 3" />
+      </a>
+      <p class="caption">🌲 Modern Mountain Chalet • <span class="price">$546.12 / night</span></p>
+    </div>
+
+  </div>
+</section>
+``
+
 
   <section id="carpool">
     <h2>🚗 Carpool Info</h2>
@@ -138,5 +233,6 @@ footer p {
     <p>Made with stress for the Snow Trip Crew</p>
     <p>Hope you have a good time with me!</p>
   </footer>
+  <div id="signature">HYPE Management LLC</div>
 </body>
 </html>
