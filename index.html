@@ -149,6 +149,48 @@
 
   #snow {position: fixed;top: 0;left: 0;width: 100%;height: 100%;pointer-events: none;z-index: 1;}
   @media (max-width:900px){#side-menu,#right-panel{display:none;}}
+    .grocery-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 15px;
+}
+
+.grocery-card {
+  width: 240px;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 12px;
+  padding: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  transition: transform 0.3s, box-shadow 0.3s;
+  text-align: left;
+}
+
+.grocery-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 16px rgba(75,156,211,0.3);
+}
+
+.grocery-card h3 {
+  color: #4b9cd3;
+  border-bottom: 1px solid #4b9cd3;
+  padding-bottom: 5px;
+  margin-top: 0;
+  font-size: 1.2em;
+}
+
+.grocery-card ul {
+  list-style-type: "• ";
+  padding-left: 20px;
+  margin: 8px 0 0;
+}
+
+.grocery-card li {
+  margin-bottom: 4px;
+  font-size: 1em;
+}
+
   </style>
 </head>
 <body>
@@ -239,40 +281,74 @@ function loop(){if(flakes.length<150)flakes.push(flake());draw();update();reques
 
 <section id="grocery">
   <h2>🛒 Grocery List for Hot Pot</h2>
-  <div class="grocery-container">
-    <div class="grocery-category">
+    <p>Here’s everything we need to buy and prep for our hot pot night!</p>
+  <div class="grocery-gallery">
+    <div class="grocery-card">
       <h3>🥩 Meats</h3>
-      <ul><li>Beef slices</li><li>Pork belly</li><li>Fish balls</li><li>Seafood</li><li>Tofu</li></ul>
+      <ul>
+        <li>Beef slices</li>
+        <li>Pork belly</li>
+        <li>Fish balls</li>
+        <li>Seafood</li>
+        <li>Tofu</li>
+      </ul>
     </div>
-    <div class="grocery-category">
+    <div class="grocery-card">
       <h3>🥬 Vegetables</h3>
-      <ul><li>Napa cabbage</li><li>Mushrooms</li><li>Spinach</li></ul>
+      <ul>
+        <li>Napa cabbage</li>
+        <li>Mushrooms</li>
+        <li>Spinach</li>
+      </ul>
     </div>
-    <div class="grocery-category">
-      <h3>🍜 Carbs</h3><ul><li>Udon</li><li>Instant ramen</li></ul>
+     <div class="grocery-card">
+      <h3>🍜 Carbs</h3>
+       <ul>
+        <li>Udon</li>
+        <li>Instant ramen</li>
+      </ul>
     </div>
-    <div class="grocery-category"> <h3>🥢 Sauces & Broth</h3> <ul> <li>Hot pot soup base (spicy & non-spicy)</li> <li>Soy sauce, sesame oil, chili paste</li> <li>Garlic, green onion, cilantro</li> <li>Peanut or sesame dipping sauce</li> </ul> </div> 
-    <div class="grocery-category"> <h3>🍹 Extras & Drinks</h3> <ul> <li>Soda, tea, juice </li>(alcohol?)</li> <li>Dessert or fruit platter</li>
+    <div class="grocery-card">
+      <h3>🥢 Sauces & Broth</h3> 
+       <ul>
+        <li>Hot pot soup base (spicy & non-spicy)</li>
+        <li>Soy sauce, sesame oil, chili paste</li> 
+        <li>Garlic, green onion, cilantro</li> 
+        <li>Peanut or sesame dipping sauce</li>
+       </ul>
+    </div> 
+     <div class="grocery-card">
+       <h3>🍹 Extras & Drinks</h3>
+       <ul> 
+         <li>Soda, tea, juice </li>
+         </li>(alcohol?)</li> 
+         <li>Dessert or fruit platter</li>
+    </div>
+      <div class="grocery-card">
+      <h3>🧺 Prep Before Trip</h3>
+      <ul>
+        <li>Assign who brings hot pot stove & cord</li>
+        <li>Pack cooler for meats</li>
+        <li>Check allergy needs</li>
+        <li>Split grocery cost before shopping</li>
+      </ul>
+    </div>
   </div>
 </section>
 
-<section id="airbnb">
-  <h2>🏠 Airbnb Options</h2>
+<section id="airbnb"> 
+  <h2>🏠 Airbnb Options</h2> 
+  <p>Click an image below to view the Airbnb listing.</p> 
   <div class="airbnb-gallery">
-    <div class="airbnb-item">
-      <a href="https://www.airbnb.com/rooms/694399222619294512" target="_blank">
-        <img src="https://a0.muscache.com/im/pictures/05f14310-65f3-4ddd-8c1d-75f21fbe0938.jpg?im_w=720" alt="Cabin 1" />
-      </a>
-      <p class="caption">❄ Cozy Cabin • <span class="price">$353/night</span></p>
-    </div>
-    <div class="airbnb-item">
-      <a href="https://www.airbnb.com/rooms/1538079493466700065" target="_blank">
-        <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-1538079493466700065/original/fc33401b-8b41-402a-80ea-3a2823f8e979.jpeg?im_w=720" alt="Cabin 2" />
-      </a>
-      <p class="caption">🏔 Lakeside Lodge • <span class="price">$429/night</span></p>
-    </div>
-  </div>
-</section>
+    <div class="airbnb-item"> 
+      <a href="https://www.airbnb.com/rooms/694399222619294512?adults=5&children=0&infants=0&pets=0&wishlist_item_id=11005544523509&check_in=2026-01-17&check_out=2026-01-18&source_impression_id=p3_1762141890_P3M9P-TdtZRsAT4M&previous_page_section_name=1000" target="_blank"> 
+      <img src="https://a0.muscache.com/im/pictures/05f14310-65f3-4ddd-8c1d-75f21fbe0938.jpg?im_w=720" alt="Cabin 1" /> </a> <p class="caption">❄ Cozy Cabin with Fireplace • <span class="price">$353.66 / night</span></p> </div> 
+  <div class="airbnb-item">
+    <a href="https://www.airbnb.com/rooms/1538079493466700065?adults=5&children=0&infants=0&pets=0&wishlist_item_id=11005544492799&check_in=2026-01-17&check_out=2026-01-18&source_impression_id=p3_1762142033_P35lGf2AplE0uc0e&previous_page_section_name=1000" target="_blank">
+    <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-1538079493466700065/original/fc33401b-8b41-402a-80ea-3a2823f8e979.jpeg?im_w=720" alt="Cabin 2" /> </a> <p class="caption">🏔️ Lakeside Lodge • <span class="price">$429 / night</span></p> </div>
+   <div class="airbnb-item"> 
+      <a href="https://www.airbnb.com/rooms/5479008?adults=5&children=0&infants=0&pets=0&wishlist_item_id=11005544521055&check_in=2026-01-17&check_out=2026-01-18&source_impression_id=p3_1762142033_P3z3a1cW3VLRAG_q&previous_page_section_name=1000" target="_blank"> 
+      <img src="https://a0.muscache.com/im/pictures/71950400-cb79-48a6-b113-759a8b578ead.jpg?im_w=720" alt="Cabin 3" /> </a> <p class="caption">🌲 Modern Mountain Chalet • <span class="price">$546.12 / night</span></p> </div> </div> </section>
 
 <section id="carpool">
   <h2>🚗 Carpool Info</h2>
