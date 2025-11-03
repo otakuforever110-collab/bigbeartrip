@@ -4,51 +4,73 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>❄️ Big Bear Trip 2026 ❄️</title>
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    body {
-      font-family: 'Times New Roman', sans-serif;
-      margin: 0;
-      background-color: #f0f7ff;
-      color: #333;
-    }
-    header {
-      background: #4b9cd3;
-      color: white;
-      text-align: center;
-      padding: 1.5em 0;
-    }
-    nav {
-      background: #ffffff;
-      text-align: center;
-      padding: 0.5em;
-    }
-    nav a {
-      margin: 0 10px;
-      text-decoration: none;
-      color: #4b9cd3;
-      font-weight: bold;
-    }
-    section {
-      max-width: 800px;
-      margin: auto;
-      padding: 20px;
-      background: white;
-      border-radius: 8px;
-      margin-top: 20px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    }
-    h2 {
-      border-bottom: 2px solid #4b9cd3;
-      padding-bottom: 5px;
-    }
-    footer {
-      text-align: center;
-      padding: 10px;
-      background: #4b9cd3;
-      color: white;
-      margin-top: 20px;
-    }
-  </style>
+  body {
+    font-family: 'Comfortaa', 'Times New Roman', sans-serif;
+    font-size: 20px;
+    margin: 0;
+    color: #333;
+    background-image: url('https://images.unsplash.com/photo-1600508774512-4ad690a2a08a?auto=format&fit=crop&w=1600&q=80');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+  }
+  header {
+    background: rgba(75, 156, 211, 0.9);
+    color: white;
+    text-align: center;
+    padding: 1.5em 0;
+    border-bottom: 3px solid white;
+  }
+  nav {
+    background: rgba(255,255,255,0.9);
+    text-align: center;
+    padding: 0.5em;
+  }
+  nav a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #4b9cd3;
+    font-weight: bold;
+  }
+  section {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 8px;
+    margin-top: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  }
+  h2 {
+    border-bottom: 2px solid #4b9cd3;
+    padding-bottom: 5px;
+  }
+  footer {
+    text-align: center;
+    padding: 10px;
+    background: rgba(75, 156, 211, 0.9);
+    color: white;
+    margin-top: 20px;
+  }
+    /* Font sizes for specific areas */
+header h1 {
+  font-size: 2.5em; /* Title at the top */
+}
+
+nav a {
+  font-size: 1.2em; /* Navigation links */
+}
+
+section p, section ul li {
+  font-size: 1.1em; /* Paragraphs and list items */
+}
+
+footer p {
+  font-size: 1em; /* Footer text */
+}
+</style>
 </head>
 <body>
   <header>
@@ -90,6 +112,27 @@
     <h2>🚗 Carpool Info</h2>
     <p>J's car: J, Hang, Ngoc, An, Thuy</p>
   </section>
+<section id="countdown">
+  <h2>⏱️ Countdown to Big Bear Trip</h2>
+  <p id="timer" style="font-size:1.5em; font-weight:bold; text-align:center;"></p>
+</section>
+
+<script>
+  const tripDate = new Date("January 17, 2026 15:00:00").getTime();
+  const timer = document.getElementById("timer");
+  setInterval(function() {
+    const now = new Date().getTime();
+    const distance = tripDate - now;
+    if (distance < 0) {
+      timer.innerHTML = "❄️ Trip is happening now! ❄️";
+      return;
+    }
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    timer.innerHTML = days + " days " + hours + " hrs " + minutes + " mins left!";
+  }, 1000);
+</script>
 
   <footer>
     <p>Made with stress for the Snow Trip Crew</p>
