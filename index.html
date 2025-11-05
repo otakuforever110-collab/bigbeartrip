@@ -258,7 +258,77 @@
   color: #4b9cd3;
   font-weight: bold;
 }
+  .container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+  }
 
+  .section-header h2 {
+    font-size: 2rem;
+    color: #fff;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.2);
+  }
+
+  .section-header p {
+    color: #f0f6fb;
+    margin-bottom: 1.5rem;
+  }
+
+  .card {
+    background: rgba(255,255,255,0.9);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 10px 24px rgba(0,0,0,0.15);
+    border: 1px solid rgba(255,255,255,0.6);
+  }
+
+  .card-media img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+  }
+
+  .card-body {
+    padding: 1.5rem;
+  }
+
+  .card-title {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.4rem;
+    color: #22313f;
+  }
+
+  .card-text {
+    color: #415a6b;
+    margin-bottom: 1rem;
+  }
+
+  .car-details {
+    list-style: none;
+    padding-left: 0;
+    margin: 0 0 1.25rem 0;
+    color: #2f4b5b;
+  }
+
+  .btn {
+    display: inline-block;
+    padding: 0.7rem 1.2rem;
+    background: rgba(75,156,211,0.95);
+    color: white;
+    border-radius: 12px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: background 0.2s ease, transform 0.1s ease;
+  }
+
+  .btn:hover {
+    background: rgba(75,156,211,1);
+  }
+
+  .btn:active {
+    transform: translateY(1px);
+  }
 
   </style>
 </head>
@@ -425,10 +495,30 @@ function loop(){if(flakes.length<150)flakes.push(flake());draw();update();reques
       <a href="https://www.airbnb.com/rooms/5479008?adults=5&children=0&infants=0&pets=0&wishlist_item_id=11005544521055&check_in=2026-01-17&check_out=2026-01-18&source_impression_id=p3_1762142033_P3z3a1cW3VLRAG_q&previous_page_section_name=1000" target="_blank"> 
       <img src="https://a0.muscache.com/im/pictures/71950400-cb79-48a6-b113-759a8b578ead.jpg?im_w=720" alt="Cabin 3" /> </a> <p class="caption">🌲 Modern Mountain Chalet • <span class="price">$546.12 / night</span></p> </div> </div> </section>
 
-<section id="carpool">
-  <h2>🚗 Carpool Info</h2>
-  <p>J's car: J, Hang, Ngoc, An, Thuy</p>
+<!-- ============== RENTAL CAR SECTION ============== -->
+<section id="rental-car" class="container">
+  <div class="section-header">
+    <h2>🚗 Our Ride to Big Bear</h2>
+    <p>Here’s the SUV we’ll be taking for the trip — comfy, snow-ready, and perfect for us :).</p>
+  </div>
+
+  <article class="card">
+    <div class="card-media">
+      <img src="https://images.unsplash.com/photo-1615900169677-6e4c26d8b2b9?auto=format&fit=crop&w=1600&q=80"
+           alt="Turo rental SUV in snow">
+    </div>
+
+    <div class="card-body">
+      <h3 class="card-title">2024 Nissan Pathfinder</h3>
+      <p class="card-text">
+      </p>
+
+      <a href="https://turo.com/us/en/suv-rental/united-states/newport-beach-ca/nissan/pathfinder/3169167"
+         class="btn btn-primary" target="_blank" rel="noopener">View on Turo</a>
+    </div>
+  </article>
 </section>
+
 
 <footer>
   <p>Made with stress for the Snow Trip Crew</p>
