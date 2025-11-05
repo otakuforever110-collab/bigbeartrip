@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>❄️ Big Bear Trip 2026 ❄️</title>
   <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&display=swap" rel="stylesheet" />
   <style>
@@ -248,7 +248,27 @@
     section {padding: 15px;}
     .grocery-card, .airbnb-item {width: 95%;}
   }
+/* Turo button styling */
+.btn-turo {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 0.7rem 1.3rem;
+  background: linear-gradient(135deg, #000000, #222222);
+  color: #fff;
+  border-radius: 10px;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  transition: all 0.3s ease;
+}
 
+.btn-turo:hover {
+  background: linear-gradient(135deg, #1a1a1a, #333);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.4);
+}
   </style>
 </head>
 <body>
@@ -432,7 +452,8 @@ function loop(){if(flakes.length<150)flakes.push(flake());draw();update();reques
       
 
       <a href="https://turo.com/us/en/suv-rental/united-states/newport-beach-ca/nissan/pathfinder/3169167"
-         class="btn btn-primary" target="_blank" rel="noopener">View on Turo</a>
+   class="btn-turo" target="_blank" rel="noopener">🚗 View on Turo
+</a>
     </div>
   </article>
 </section>
