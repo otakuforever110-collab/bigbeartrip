@@ -29,23 +29,98 @@
   }
 
   /* Header */
+  /* Header - now fully responsive */
+header {
+  background: rgba(75, 156, 211, 0.95);
+  color: white;
+  text-align: center;
+  padding: 2em 1em;
+  border-bottom: 3px solid white;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  background-size: cover;
+  background-position: center;
+  transition: all 0.3s ease;
+}
+
+header h1 {
+  font-size: clamp(1.8em, 5vw, 2.8em);
+  text-shadow: 0 0 6px #fff, 0 0 12px #4b9cd3;
+  animation: glowPulse 3s ease-in-out infinite alternate;
+}
+
+header p {
+  font-size: clamp(0.9em, 3vw, 1.2em);
+  margin-top: 0.5em;
+  color: #eefaff;
+}
+
+/* Make header scale nicely on small screens */
+@media (max-width: 600px) {
   header {
-    background: rgba(75, 156, 211, 0.95);
-    color: white;
-    text-align: center;
-    padding: 1.5em 0;
-    border-bottom: 3px solid white;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    padding: 1.5em 0.8em;
   }
 
-  header h1 {
-    font-size: 2.6em;
-    text-shadow: 0 0 6px #fff, 0 0 12px #4b9cd3;
-    animation: glowPulse 3s ease-in-out infinite alternate;
-  }
   @keyframes glowPulse {
     from { text-shadow: 0 0 6px #fff, 0 0 12px #4b9cd3; }
     to { text-shadow: 0 0 2px #fff, 0 0 8px #7cc7f7; }
+  }
+/* 📱 Mobile Optimization */
+@media (max-width: 900px) {
+  body {
+    font-size: 18px;
+    padding: 0;
+  }
+
+  header {
+    padding: 1em 0.5em;
+  }
+
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0.8em;
+    background: rgba(255,255,255,0.95);
+  }
+
+  nav a {
+    margin: 6px 8px;
+    font-size: 0.95em;
+  }
+
+  /* Hide side panels on mobile */
+  #side-menu, #right-panel {
+    display: none !important;
+  }
+
+  /* Sections become full width */
+  section {
+    margin: 15px auto;
+    width: 90%;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+  }
+
+  .airbnb-gallery {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .airbnb-item {
+    width: 95%;
+    max-width: 340px;
+  }
+
+  footer {
+    font-size: 0.9em;
+  }
+
+  #contact-bubble {
+    left: 10px;
+    bottom: 15px;
+  }
+
+  #signature {
+    display: none;
   }
 
   /* Navigation */
